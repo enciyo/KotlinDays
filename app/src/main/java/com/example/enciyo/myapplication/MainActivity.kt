@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         //Branch ShareButton
+        
         btnShareToOtherApps.setOnClickListener {
             val message: String = etUserMessage.text.toString()
 
