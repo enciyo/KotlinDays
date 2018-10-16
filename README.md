@@ -9,3 +9,9 @@ Kotlin Days contents
 # 2. ShareButton-Implict Intent Branch
 * Share data to other apps
 * Implict Intent
+
+# 3.Recycler-CardView-DataModel
+* Recycler View
+* CardView
+* Recycler Adapter
+* Data model class
