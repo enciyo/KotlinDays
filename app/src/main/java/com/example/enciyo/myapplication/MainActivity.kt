@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_second.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,6 +38,13 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(Intent.EXTRA_TEXT,message)
             intent.type="text/plain"
             startActivity(Intent.createChooser(intent,"Please select app: "))
+        }
+
+        //Recycler View
+
+        btnRecyclerView.setOnClickListener {
+            val intent= Intent(this,HobbiesActivity::class.java)
+            startActivity(intent)
         }
 
     }
