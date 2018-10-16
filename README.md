@@ -15,3 +15,4 @@ Kotlin Days contents
 * CardView
 * Recycler Adapter
 * Data model class
+* Item OnClick
