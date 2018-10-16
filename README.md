@@ -10,9 +10,14 @@ Kotlin Days contents
 * Share data to other apps
 * Implict Intent
 
-# 3.Recycler-CardView-DataModel
+# 3.Recycler-CardView-DataModel Branch
 * Recycler View
 * CardView
 * Recycler Adapter
 * Data model class
 * Item OnClick
+
+# 4.Extensions-CleanCode Branch
+* Extension
+* CleanCode
+Example: goIntent(), showToast()
