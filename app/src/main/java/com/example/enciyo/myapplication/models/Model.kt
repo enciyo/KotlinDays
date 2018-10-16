@@ -1,8 +1,8 @@
-package com.example.enciyo.myapplication
+package com.example.enciyo.myapplication.models
 
-data class Hobby(var title: String )
+data class Hobby(var title: String)
 
-object Supplier{
+object Supplier {
 
     val hobbies = listOf<Hobby>(
             Hobby("Swimming"),

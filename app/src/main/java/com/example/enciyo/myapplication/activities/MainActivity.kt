@@ -1,10 +1,13 @@
-package com.example.enciyo.myapplication
+package com.example.enciyo.myapplication.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.enciyo.myapplication.R
+import com.example.enciyo.myapplication.goIntent
+import com.example.enciyo.myapplication.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -16,14 +19,14 @@ class MainActivity : AppCompatActivity() {
 
         btnShowToast.setOnClickListener {
             Log.i("MainActivity","Button was clicked")
-            Toast.makeText(this,"Button was clicked",Toast.LENGTH_SHORT).show()
+            showToast("Button onClicked")
         }
 
         btnSendMsgToNextActivity.setOnClickListener {
             val message:String = etUserMessage.text.toString()
-            Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
+            showToast("Button onClicked")
 
-            val intent = Intent(this,SecondActivity::class.java)
+            val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("userMessage",message)
             startActivity(intent)
         }
@@ -32,7 +35,6 @@ class MainActivity : AppCompatActivity() {
 
         btnShareToOtherApps.setOnClickListener {
             val message: String = etUserMessage.text.toString()
-
             val intent= Intent()
             intent.action=Intent.ACTION_SEND
             intent.putExtra(Intent.EXTRA_TEXT,message)
@@ -43,8 +45,7 @@ class MainActivity : AppCompatActivity() {
         //Recycler View
 
         btnRecyclerView.setOnClickListener {
-            val intent= Intent(this,HobbiesActivity::class.java)
-            startActivity(intent)
+          goIntent(HobbiesActivity::class.java)
         }
 
     }
