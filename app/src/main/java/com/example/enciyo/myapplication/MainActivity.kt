@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_second.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,17 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,SecondActivity::class.java)
             intent.putExtra("userMessage",message)
             startActivity(intent)
+        }
+
+        //Branch ShareButton
+        btnShareToOtherApps.setOnClickListener {
+            val message: String = etUserMessage.text.toString()
+
+            val intent= Intent()
+            intent.action=Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT,message)
+            intent.type="text/plain"
+            startActivity(Intent.createChooser(intent,"Please select app: "))
         }
 
     }
